@@ -18,11 +18,16 @@ interface PriceCardProps {
   popular?: boolean;
 }
 
+// Helper function to format price in VND
+function formatPrice(price: number): string {
+  return new Intl.NumberFormat('vi-VN').format(price);
+}
+
 export function PriceCard({ 
   title, 
   icon: Icon, 
   price, 
-  period = "month",
+  period = "tháng",
   tiers,
   features,
   popular
@@ -31,10 +36,10 @@ export function PriceCard({
     <Card className={`relative ${popular ? 'border-primary shadow-lg' : ''}`}>
       {popular && (
         <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm">
-          Most Popular
+          Phổ Biến Nhất
         </div>
       )}
-      
+
       <CardHeader className="text-center pb-4">
         <div className="flex justify-center mb-4">
           <Icon className="h-12 w-12 text-primary" />
@@ -52,7 +57,7 @@ export function PriceCard({
               >
                 <span className="font-medium">{tier.name}</span>
                 <span className="text-primary font-bold">
-                  ${tier.price}/{period}
+                  {formatPrice(tier.price)}đ/{period}
                 </span>
               </div>
             ))}
@@ -60,7 +65,7 @@ export function PriceCard({
         ) : (
           <div className="text-center mb-6">
             <div className="text-4xl font-bold">
-              ${price}
+              {formatPrice(price || 0)}đ
               <span className="text-lg text-muted-foreground">/{period}</span>
             </div>
           </div>
@@ -78,7 +83,7 @@ export function PriceCard({
         <Button
           className={`w-full ${popular ? 'bg-orange-500 hover:bg-orange-600' : ''}`}
         >
-          Get Started
+          Đăng Ký Ngay
         </Button>
       </CardContent>
     </Card>
