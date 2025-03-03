@@ -12,18 +12,18 @@ export function Hero() {
             transition={{ duration: 0.6 }}
           >
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
-              Cloud Storage & Creative Tools at{" "}
-              <span className="text-primary">Unbeatable Prices</span>
+              Lưu Trữ Đám Mây & Công Cụ Sáng Tạo với{" "}
+              <span className="text-primary">Giá Tốt Nhất</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Get 30TB storage, Gemini AI, Office 365, and Adobe Creative Suite - all starting from just $49/month.
+              Nhận 30TB lưu trữ, Gemini AI, Office 365, và Adobe Creative Suite - tất cả chỉ từ 1.190.000đ/tháng.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="bg-orange-500 hover:bg-orange-600">
-                Start Free Trial
+                Dùng Thử Miễn Phí
               </Button>
               <Button size="lg" variant="outline">
-                View Pricing
+                Xem Bảng Giá
               </Button>
             </div>
           </motion.div>
@@ -36,7 +36,7 @@ export function Hero() {
           >
             <img
               src="https://images.unsplash.com/photo-1561736778-92e52a7769ef"
-              alt="Cloud Computing"
+              alt="Điện toán đám mây"
               className="object-cover w-full h-full rounded-lg"
             />
           </motion.div>

@@ -6,10 +6,10 @@ import { Menu } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 
 const navItems = [
-  { href: "#services", label: "Services" },
-  { href: "#pricing", label: "Pricing" },
-  { href: "#guarantees", label: "Guarantees" },
-  { href: "#contact", label: "Contact" },
+  { href: "#services", label: "Dịch Vụ" },
+  { href: "#pricing", label: "Bảng Giá" },
+  { href: "#guarantees", label: "Cam Kết" },
+  { href: "#contact", label: "Liên Hệ" },
 ];
 
 export function Navbar() {
@@ -53,7 +53,7 @@ export function Navbar() {
           <nav className="flex items-center gap-6">
             <NavLinks />
             <Button className="bg-orange-500 hover:bg-orange-600">
-              Sign Up Now
+              Đăng Ký Ngay
             </Button>
           </nav>
         )}

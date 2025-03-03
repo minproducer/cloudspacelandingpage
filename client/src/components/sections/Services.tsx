@@ -4,20 +4,20 @@ import { Cloud, Palette, FileText } from "lucide-react";
 
 const services = [
   {
-    title: "Cloud Storage",
-    description: "Secure cloud storage with up to 30TB space. Automated backup and easy file sharing.",
+    title: "Lưu Trữ Đám Mây",
+    description: "Lưu trữ đám mây an toàn với dung lượng lên đến 30TB. Sao lưu tự động và chia sẻ file dễ dàng.",
     icon: Cloud,
     image: "https://images.unsplash.com/photo-1629904853716-f0bc54eea481"
   },
   {
-    title: "Creative Suite",
-    description: "Full Adobe Creative Suite access with latest features and updates.",
+    title: "Bộ Công Cụ Sáng Tạo",
+    description: "Truy cập đầy đủ Adobe Creative Suite với các tính năng và cập nhật mới nhất.",
     icon: Palette,
     image: "https://images.unsplash.com/photo-1617575521317-d2974f3b56d2"
   },
   {
-    title: "Office Tools",
-    description: "Microsoft Office 365 with Word, Excel, PowerPoint and more.",
+    title: "Công Cụ Văn Phòng",
+    description: "Microsoft Office 365 với Word, Excel, PowerPoint và nhiều ứng dụng khác.",
     icon: FileText,
     image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c"
   }
@@ -35,10 +35,10 @@ export function Services() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Our Services
+            Dịch Vụ Của Chúng Tôi
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Everything you need for storage and creativity in one place
+            Tất cả những gì bạn cần cho lưu trữ và sáng tạo trong một nơi duy nhất
           </p>
         </motion.div>
 
