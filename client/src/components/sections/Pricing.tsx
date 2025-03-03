@@ -53,24 +53,24 @@ const pricingPlans = [
 
 export function Pricing() {
   return (
-    <section id="pricing" className="py-16 md:py-24">
+    <section id="pricing" className="py-24 md:py-32">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-12"
+          className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight">
             Bảng Giá Đơn Giản, Minh Bạch
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Chọn gói dịch vụ phù hợp với nhu cầu của bạn. Tất cả các gói đều được bảo đảm hoàn tiền 100%.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 xl:gap-12">
           {pricingPlans.map((plan, index) => (
             <motion.div
               key={plan.title}
@@ -78,6 +78,7 @@ export function Pricing() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
+              className={`${plan.popular ? 'md:-mt-4 md:mb-4' : ''}`}
             >
               <PriceCard {...plan} />
             </motion.div>

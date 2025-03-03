@@ -22,7 +22,7 @@ export function Navbar() {
         <a
           key={item.href}
           href={item.href}
-          className="text-foreground/70 hover:text-foreground transition-colors"
+          className="text-foreground/70 hover:text-foreground transition-colors font-medium px-2 py-1 rounded-md hover:bg-accent"
           onClick={() => setIsOpen(false)}
         >
           {item.label}
@@ -33,26 +33,29 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center justify-between">
-        <Link href="/" className="font-bold text-2xl text-primary">
+      <div className="container flex h-20 items-center justify-between">
+        <Link href="/" className="font-bold text-2xl text-primary tracking-tight hover:text-primary/90 transition-colors">
           CloudSpace
         </Link>
 
         {isMobile ? (
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon">
+              <Button variant="ghost" size="icon" className="hover:bg-accent">
                 <Menu className="h-6 w-6" />
               </Button>
             </SheetTrigger>
-            <SheetContent className="w-[300px] flex flex-col gap-4 pt-10">
+            <SheetContent className="w-[300px] flex flex-col gap-6 pt-12">
               <NavLinks />
             </SheetContent>
           </Sheet>
         ) : (
-          <nav className="flex items-center gap-6">
+          <nav className="flex items-center gap-8">
             <NavLinks />
-            <Button className="bg-orange-500 hover:bg-orange-600">
+            <Button 
+              className="bg-orange-500 hover:bg-orange-600 px-6 font-medium"
+              size="lg"
+            >
               Đăng Ký Ngay
             </Button>
           </nav>
