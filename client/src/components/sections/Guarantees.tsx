@@ -6,23 +6,23 @@ import { StatCounter } from "@/components/shared/StatCounter";
 const guarantees = [
   {
     icon: Shield,
-    title: "100% Money Back",
-    description: "Not satisfied? Get a full refund within 30 days, no questions asked."
+    title: "Hoàn Tiền 100%",
+    description: "Không hài lòng? Hoàn tiền đầy đủ trong vòng 30 ngày, không cần lý do."
   },
   {
     icon: RefreshCcw,
-    title: "Data Protection",
-    description: "100x compensation if any data loss occurs from our side."
+    title: "Bảo Vệ Dữ Liệu",
+    description: "Đền bù gấp 100 lần nếu xảy ra mất dữ liệu từ phía chúng tôi."
   },
   {
     icon: Clock,
-    title: "24/7 Support",
-    description: "Round-the-clock technical support via email, chat, or phone."
+    title: "Hỗ Trợ 24/7",
+    description: "Hỗ trợ kỹ thuật 24/7 qua email, chat hoặc điện thoại."
   },
   {
     icon: Award,
-    title: "1 Year Warranty",
-    description: "Full warranty coverage with instant replacement policy."
+    title: "Bảo Hành 1 Năm",
+    description: "Bảo hành đầy đủ với chính sách thay thế ngay lập tức."
   }
 ];
 
@@ -38,10 +38,10 @@ export function Guarantees() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Our Guarantees
+            Cam Kết Của Chúng Tôi
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            We stand behind our service with industry-leading guarantees
+            Chúng tôi cam kết mang đến dịch vụ tốt nhất với những bảo đảm hàng đầu
           </p>
         </motion.div>
 
@@ -70,19 +70,19 @@ export function Guarantees() {
             <div className="text-4xl font-bold text-primary mb-2">
               <StatCounter end={100} suffix="%" />
             </div>
-            <p className="text-muted-foreground">Satisfaction Rate</p>
+            <p className="text-muted-foreground">Tỷ Lệ Hài Lòng</p>
           </div>
           <div className="p-6">
             <div className="text-4xl font-bold text-primary mb-2">
               <StatCounter end={50000} suffix="+" />
             </div>
-            <p className="text-muted-foreground">Happy Customers</p>
+            <p className="text-muted-foreground">Khách Hàng Tin Dùng</p>
           </div>
           <div className="p-6">
             <div className="text-4xl font-bold text-primary mb-2">
               <StatCounter end={99.9} suffix="%" />
             </div>
-            <p className="text-muted-foreground">Uptime Guarantee</p>
+            <p className="text-muted-foreground">Thời Gian Hoạt Động</p>
           </div>
         </div>
       </div>

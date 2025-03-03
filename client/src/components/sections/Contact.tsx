@@ -18,10 +18,10 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 
 const contactSchema = z.object({
-  name: z.string().min(2, "Name must be at least 2 characters"),
-  email: z.string().email("Please enter a valid email"),
-  phone: z.string().min(10, "Please enter a valid phone number"),
-  message: z.string().min(10, "Message must be at least 10 characters"),
+  name: z.string().min(2, "Tên phải có ít nhất 2 ký tự"),
+  email: z.string().email("Vui lòng nhập email hợp lệ"),
+  phone: z.string().min(10, "Vui lòng nhập số điện thoại hợp lệ"),
+  message: z.string().min(10, "Tin nhắn phải có ít nhất 10 ký tự"),
 });
 
 type ContactFormValues = z.infer<typeof contactSchema>;
@@ -41,8 +41,8 @@ export function Contact() {
   const onSubmit = (data: ContactFormValues) => {
     console.log(data);
     toast({
-      title: "Message Sent",
-      description: "We'll get back to you as soon as possible!",
+      title: "Đã Gửi Tin Nhắn",
+      description: "Chúng tôi sẽ liên hệ lại với bạn trong thời gian sớm nhất!",
     });
     form.reset();
   };
@@ -58,10 +58,10 @@ export function Contact() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Get in Touch
+            Liên Hệ Với Chúng Tôi
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Have questions? We're here to help with all your cloud storage and creative needs
+            Bạn có thắc mắc? Chúng tôi luôn sẵn sàng hỗ trợ mọi nhu cầu về lưu trữ và sáng tạo của bạn
           </p>
         </motion.div>
 
@@ -81,9 +81,9 @@ export function Contact() {
                       name="name"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Name</FormLabel>
+                          <FormLabel>Họ Tên</FormLabel>
                           <FormControl>
-                            <Input placeholder="Your name" {...field} />
+                            <Input placeholder="Nhập họ tên của bạn" {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -96,7 +96,7 @@ export function Contact() {
                         <FormItem>
                           <FormLabel>Email</FormLabel>
                           <FormControl>
-                            <Input placeholder="your@email.com" {...field} />
+                            <Input placeholder="email@example.com" {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -107,9 +107,9 @@ export function Contact() {
                       name="phone"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Phone</FormLabel>
+                          <FormLabel>Số Điện Thoại</FormLabel>
                           <FormControl>
-                            <Input placeholder="Your phone number" {...field} />
+                            <Input placeholder="Nhập số điện thoại của bạn" {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -120,10 +120,10 @@ export function Contact() {
                       name="message"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Message</FormLabel>
+                          <FormLabel>Tin Nhắn</FormLabel>
                           <FormControl>
                             <Textarea
-                              placeholder="How can we help you?"
+                              placeholder="Bạn cần hỗ trợ gì?"
                               className="min-h-[120px]"
                               {...field}
                             />
@@ -133,7 +133,7 @@ export function Contact() {
                       )}
                     />
                     <Button type="submit" className="w-full">
-                      Send Message
+                      Gửi Tin Nhắn
                     </Button>
                   </form>
                 </Form>
@@ -152,8 +152,8 @@ export function Contact() {
               <CardContent className="p-6 flex items-center gap-4">
                 <Phone className="h-6 w-6 text-primary" />
                 <div>
-                  <h3 className="font-semibold">Phone</h3>
-                  <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                  <h3 className="font-semibold">Điện Thoại</h3>
+                  <p className="text-muted-foreground">(028) 1234-5678</p>
                 </div>
               </CardContent>
             </Card>
@@ -162,7 +162,7 @@ export function Contact() {
                 <Mail className="h-6 w-6 text-primary" />
                 <div>
                   <h3 className="font-semibold">Email</h3>
-                  <p className="text-muted-foreground">support@cloudspace.com</p>
+                  <p className="text-muted-foreground">hotro@cloudspace.com</p>
                 </div>
               </CardContent>
             </Card>
@@ -170,8 +170,8 @@ export function Contact() {
               <CardContent className="p-6 flex items-center gap-4">
                 <MessageSquare className="h-6 w-6 text-primary" />
                 <div>
-                  <h3 className="font-semibold">Live Chat</h3>
-                  <p className="text-muted-foreground">Available 24/7</p>
+                  <h3 className="font-semibold">Chat Trực Tuyến</h3>
+                  <p className="text-muted-foreground">Hỗ trợ 24/7</p>
                 </div>
               </CardContent>
             </Card>
