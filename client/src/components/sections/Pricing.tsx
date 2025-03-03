@@ -7,12 +7,12 @@ const pricingPlans = [
     title: "Google Drive + Gemini",
     icon: Database,
     tiers: [
-      { name: "1TB", price: 239000 },
-      { name: "2TB", price: 479000 },
-      { name: "5TB", price: 719000 },
-      { name: "10TB", price: 839000 },
-      { name: "20TB", price: 1079000 },
-      { name: "30TB", price: 1199000 }
+      { name: "1TB", price: 99000 },
+      { name: "2TB", price: 199000 },
+      { name: "5TB", price: 299000 },
+      { name: "10TB", price: 349000 },
+      { name: "20TB", price: 449000 },
+      { name: "30TB", price: 499000 }
     ],
     features: [
       "Lưu trữ không giới hạn",
@@ -25,28 +25,28 @@ const pricingPlans = [
   {
     title: "Office 365",
     icon: FileType2,
-    price: 1199000,
+    price: 499000,
     period: "năm",
     features: [
       "Word, Excel, PowerPoint",
       "1TB lưu trữ OneDrive",
-      "Email doanh nghiệp",
-      "Teams hợp tác",
-      "Ứng dụng di động"
+      "Cài đặt trực tiếp hoặc online",
+      "Bảo hành trọn đời",
+      "Hỗ trợ kỹ thuật 24/7"
     ],
     popular: true
   },
   {
     title: "Adobe Creative Suite",
     icon: Palette,
-    price: 1919000,
-    period: "năm",
+    price: 199000,
+    period: "gói",
     features: [
       "Photoshop",
       "Illustrator",
       "Premiere Pro",
       "After Effects",
-      "Tất cả ứng dụng Adobe"
+      "Cập nhật phiên bản mới nhất"
     ]
   }
 ];
