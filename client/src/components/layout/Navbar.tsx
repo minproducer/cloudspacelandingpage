@@ -4,26 +4,34 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { useSmoothScroll } from "@/hooks/use-smooth-scroll";
 
 const navItems = [
-  { href: "#services", label: "Dịch Vụ" },
-  { href: "#pricing", label: "Bảng Giá" },
-  { href: "#guarantees", label: "Cam Kết" },
-  { href: "#contact", label: "Liên Hệ" },
+  { href: "services", label: "Dịch Vụ" },
+  { href: "pricing", label: "Bảng Giá" },
+  { href: "guarantees", label: "Cam Kết" },
+  { href: "contact", label: "Liên Hệ" },
 ];
 
 export function Navbar() {
   const isMobile = useIsMobile();
   const [isOpen, setIsOpen] = useState(false);
+  const scrollToElement = useSmoothScroll();
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, elementId: string) => {
+    e.preventDefault();
+    scrollToElement(elementId);
+    setIsOpen(false);
+  };
 
   const NavLinks = () => (
     <>
       {navItems.map((item) => (
         <a
           key={item.href}
-          href={item.href}
+          href={`#${item.href}`}
           className="text-foreground/70 hover:text-foreground transition-colors font-medium px-2 py-1 rounded-md hover:bg-accent"
-          onClick={() => setIsOpen(false)}
+          onClick={(e) => handleNavClick(e, item.href)}
         >
           {item.label}
         </a>
