@@ -4,8 +4,9 @@ import { Database, FileType2, Palette } from "lucide-react";
 
 const pricingPlans = [
   {
-    title: "Google Drive + Gemini",
+    title: "Google One",
     icon: Database,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdY7XDGTOBffioTozmu3G49cZY8Yq1hNd6Pg&s",
     tiers: [
       { name: "1TB", price: 99000, period: "năm" },
       { name: "2TB", price: 199000, period: "năm" },
@@ -15,7 +16,8 @@ const pricingPlans = [
       { name: "30TB", price: 499000, period: "năm" },
     ],
     features: [
-      "Lưu trữ không giới hạn",
+      "Drive dung lượng cao",
+      "Gemini Advance độc quyền",
       "Tìm kiếm bằng AI",
       "Chia sẻ file nâng cao",
       "Sao lưu tự động",

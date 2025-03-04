@@ -13,6 +13,7 @@ interface PriceTier {
 interface PriceCardProps {
   title: string;
   icon: LucideIcon;
+  image?: string;
   price?: number;
   period?: string;
   tiers?: PriceTier[];
@@ -28,6 +29,7 @@ function formatPrice(price: number): string {
 export function PriceCard({ 
   title, 
   icon: Icon, 
+  image,
   price, 
   period = "tháng",
   tiers,
@@ -43,11 +45,17 @@ export function PriceCard({
       )}
 
       <CardHeader className="text-center pb-6">
-        <div className="flex justify-center mb-6">
-          <div className={`p-3 rounded-xl ${popular ? 'bg-primary text-primary-foreground' : 'bg-primary/10 text-primary'}`}>
-            <Icon className="h-8 w-8" />
+        {image ? (
+          <div className="flex justify-center mb-6">
+            <img src={image} alt={title} className="h-16 w-auto object-contain" />
           </div>
-        </div>
+        ) : (
+          <div className="flex justify-center mb-6">
+            <div className={`p-3 rounded-xl ${popular ? 'bg-primary text-primary-foreground' : 'bg-primary/10 text-primary'}`}>
+              <Icon className="h-8 w-8" />
+            </div>
+          </div>
+        )}
         <h3 className="text-2xl font-bold tracking-tight">{title}</h3>
       </CardHeader>
 
