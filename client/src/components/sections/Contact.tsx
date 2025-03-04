@@ -107,7 +107,7 @@ export function Contact() {
                 <Mail className="h-6 w-6 text-primary" />
                 <div>
                   <h3 className="font-semibold">Email</h3>
-                  <p className="text-muted-foreground">hotro@cloudspace.com</p>
+                  <p className="text-muted-foreground">hotro@chipandchill.com</p>
                 </div>
               </CardContent>
             </Card>
