@@ -54,8 +54,8 @@ export function PriceCard({
               alt={title} 
               className={`w-auto object-contain transition-transform hover:scale-105 ${
                 imageSize === 'small' ? 'h-14' : 
-                imageSize === 'large' ? 'h-24' : 'h-20'
-                imageSize === 'extra' ? 'h-30' : 'h-20'
+                imageSize === 'large' ? 'h-24' : 
+                imageSize === 'extra-large' ? 'h-30' : 'h-20'
               }`} 
             />
           </div>
