@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
@@ -6,11 +7,9 @@ import {
   Mail,
   MessageSquare,
   Phone,
-  InstagramIcon,
-  TwitterIcon,
-  LinkedinIcon,
   YoutubeIcon,
 } from "lucide-react";
+import { TiSocialTiktok } from "react-icons/ti";
 
 const socialLinks = [
   {
@@ -20,29 +19,16 @@ const socialLinks = [
     color: "bg-[#1877F2] hover:bg-[#0e65d0]",
   },
   {
-    name: "Instagram",
-    icon: InstagramIcon,
-    url: "https://instagram.com",
-    color:
-      "bg-gradient-to-r from-[#fd5949] to-[#d6249f] hover:from-[#e04c3e] hover:to-[#c01e8f]",
-  },
-  {
-    name: "Twitter",
-    icon: TwitterIcon,
-    url: "https://twitter.com",
-    color: "bg-[#1DA1F2] hover:bg-[#0c85d0]",
-  },
-  {
-    name: "LinkedIn",
-    icon: LinkedinIcon,
-    url: "https://linkedin.com",
-    color: "bg-[#0A66C2] hover:bg-[#0856a2]",
-  },
-  {
     name: "YouTube",
     icon: YoutubeIcon,
     url: "https://youtube.com",
     color: "bg-[#FF0000] hover:bg-[#d90000]",
+  },
+  {
+    name: "Tiktok",
+    icon: TiSocialTiktok,
+    url: "https://tiktok.com",
+    color: "bg-[#000] hover:bg-[#333]",
   },
 ];
 
