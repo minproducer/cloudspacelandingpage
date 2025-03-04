@@ -20,13 +20,13 @@ app.use((req, res, next) => {
   res.on("finish", () => {
     const duration = Date.now() - start;
     if (path.startsWith("/api")) {
-      let logLine = `${req.method} ${path} ${res.statusCode} in ${duration}ms`;
+      const status = res.statusCode;
+      const statusColor = status >= 400 ? "red" : status >= 300 ? "yellow" : "green";
+      
+      let logLine = `${req.method} ${path} ${status} in ${duration}ms`;
       if (capturedJsonResponse) {
-        logLine += ` :: ${JSON.stringify(capturedJsonResponse)}`;
-      }
-
-      if (logLine.length > 80) {
-        logLine = logLine.slice(0, 79) + "…";
+        const responsePreview = JSON.stringify(capturedJsonResponse).substring(0, 60);
+        logLine += ` :: ${responsePreview}${responsePreview.length > 60 ? '...' : ''}`;
       }
 
       log(logLine);
