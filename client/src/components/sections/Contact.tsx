@@ -1,39 +1,49 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
-import { Facebook, Mail, MessageSquare, Phone, Instagram, Twitter, Linkedin, Youtube } from "lucide-react";
+import {
+  FacebookIcon,
+  Mail,
+  MessageSquare,
+  Phone,
+  InstagramIcon,
+  TwitterIcon,
+  LinkedinIcon,
+  YoutubeIcon,
+} from "lucide-react";
 
 const socialLinks = [
   {
     name: "Facebook",
-    icon: Facebook,
-    url: "https://facebook.com",
-    color: "bg-[#1877F2] hover:bg-[#0e65d0]"
+    icon: FacebookIcon,
+    url: "https://facebook.com/chipandchillstore",
+    color: "bg-[#1877F2] hover:bg-[#0e65d0]",
   },
   {
     name: "Instagram",
-    icon: Instagram,
+    icon: InstagramIcon,
     url: "https://instagram.com",
-    color: "bg-gradient-to-r from-[#fd5949] to-[#d6249f] hover:from-[#e04c3e] hover:to-[#c01e8f]"
+    color:
+      "bg-gradient-to-r from-[#fd5949] to-[#d6249f] hover:from-[#e04c3e] hover:to-[#c01e8f]",
   },
   {
     name: "Twitter",
-    icon: Twitter,
+    icon: TwitterIcon,
     url: "https://twitter.com",
-    color: "bg-[#1DA1F2] hover:bg-[#0c85d0]"
+    color: "bg-[#1DA1F2] hover:bg-[#0c85d0]",
   },
   {
     name: "LinkedIn",
-    icon: Linkedin,
+    icon: LinkedinIcon,
     url: "https://linkedin.com",
-    color: "bg-[#0A66C2] hover:bg-[#0856a2]"
+    color: "bg-[#0A66C2] hover:bg-[#0856a2]",
   },
   {
     name: "YouTube",
-    icon: Youtube,
+    icon: YoutubeIcon,
     url: "https://youtube.com",
-    color: "bg-[#FF0000] hover:bg-[#d90000]"
-  }
+    color: "bg-[#FF0000] hover:bg-[#d90000]",
+  },
 ];
 
 export function Contact() {
@@ -51,7 +61,8 @@ export function Contact() {
             Kết Nối Với Chúng Tôi
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Theo dõi chúng tôi trên các nền tảng mạng xã hội để cập nhật thông tin mới nhất và nhận hỗ trợ
+            Theo dõi chúng tôi trên các nền tảng mạng xã hội để cập nhật thông
+            tin mới nhất và nhận hỗ trợ
           </p>
         </motion.div>
 
@@ -66,10 +77,10 @@ export function Contact() {
             <h3 className="text-xl font-semibold mb-4">Mạng Xã Hội</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {socialLinks.map((social) => (
-                <a 
-                  key={social.name} 
-                  href={social.url} 
-                  target="_blank" 
+                <a
+                  key={social.name}
+                  href={social.url}
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="no-underline"
                 >
@@ -98,7 +109,7 @@ export function Contact() {
                 <Phone className="h-6 w-6 text-primary" />
                 <div>
                   <h3 className="font-semibold">Điện Thoại</h3>
-                  <p className="text-muted-foreground">(028) 1234-5678</p>
+                  <p className="text-muted-foreground">077 344-8750</p>
                 </div>
               </CardContent>
             </Card>
@@ -107,7 +118,9 @@ export function Contact() {
                 <Mail className="h-6 w-6 text-primary" />
                 <div>
                   <h3 className="font-semibold">Email</h3>
-                  <p className="text-muted-foreground">hotro@chipandchill.com</p>
+                  <p className="text-muted-foreground">
+                    minhhai113he@gmail.com
+                  </p>
                 </div>
               </CardContent>
             </Card>
