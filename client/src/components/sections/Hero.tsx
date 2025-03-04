@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { SocialDialog } from "@/components/shared/SocialDialog";
 
 export function Hero() {
   return (
@@ -20,12 +21,14 @@ export function Hero() {
               Nhận 30TB lưu trữ, Gemini AI, Office 365, và Adobe Creative Suite - tất cả chỉ từ 1.190.000đ/tháng.
             </p>
             <div className="flex flex-col sm:flex-row gap-6">
-              <Button 
-                size="lg" 
-                className="bg-orange-500 hover:bg-orange-600 px-8 h-14 text-lg font-medium"
-              >
-                Dùng Thử Miễn Phí
-              </Button>
+              <SocialDialog>
+                <Button 
+                  size="lg" 
+                  className="bg-orange-500 hover:bg-orange-600 px-8 h-14 text-lg font-medium"
+                >
+                  Dùng Thử Miễn Phí
+                </Button>
+              </SocialDialog>
               <Button 
                 size="lg" 
                 variant="outline"

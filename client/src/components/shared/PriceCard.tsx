@@ -87,13 +87,13 @@ export function PriceCard({
           ))}
         </ul>
 
-        <Button
-          className={`w-full h-12 text-lg font-medium ${popular ? 'bg-orange-500 hover:bg-orange-600' : ''}`}
-          onClick={() => {/*Open SocialDialog*/}}
-        >
-          Đăng Ký Ngay
-        </Button>
-        <SocialDialog />
+        <SocialDialog>
+          <Button
+            className={`w-full h-12 text-lg font-medium ${popular ? 'bg-orange-500 hover:bg-orange-600' : ''}`}
+          >
+            Đăng Ký Ngay
+          </Button>
+        </SocialDialog>
       </CardContent>
     </Card>
   );
