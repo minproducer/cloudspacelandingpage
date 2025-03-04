@@ -8,7 +8,7 @@ const pricingPlans = [
     icon: Database,
     image:
       "https://cdn1.iconfinder.com/data/icons/logos-brands-in-colors/176/Google_One_logo-512.png",
-    imageSize: 'large', // Added imageSize
+    imageSize: "large", // Added imageSize
     tiers: [
       { name: "1TB", price: 99000, period: "năm" },
       { name: "2TB", price: 199000, period: "năm" },
@@ -34,7 +34,7 @@ const pricingPlans = [
     period: "năm",
     image:
       "https://download.logo.wine/logo/Office_365/Office_365-Logo.wine.png",
-    imageSize: 'medium', // Added imageSize
+    imageSize: "extra-large", // Added imageSize
     features: [
       "Word, Excel, PowerPoint",
       "1TB lưu trữ OneDrive",
@@ -48,7 +48,9 @@ const pricingPlans = [
     icon: Palette,
     price: 199000,
     period: "phần mềm",
-    imageSize: 'small', // Added imageSize
+    imageSize: "small",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Adobe_Creative_Cloud_rainbow_icon.svg/1200px-Adobe_Creative_Cloud_rainbow_icon.svg.png", // Added imageSize
     features: [
       "Photoshop",
       "Illustrator",
