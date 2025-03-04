@@ -4,15 +4,15 @@ import { Database, FileType2, Palette } from "lucide-react";
 
 const pricingPlans = [
   {
-    title: "Gói Lưu Trữ + Gemini",
+    title: "Google Drive + Gemini",
     icon: Database,
     tiers: [
-      { name: "1TB", price: 1190000, period: "năm" },
-      { name: "2TB", price: 2290000, period: "năm" },
-      { name: "5TB", price: 3490000, period: "năm" },
-      { name: "10TB", price: 4590000, period: "năm" },
-      { name: "20TB", price: 5990000, period: "năm" },
-      { name: "30TB", price: 6990000, period: "năm" },
+      { name: "1TB", price: 99000, period: "năm" },
+      { name: "2TB", price: 199000, period: "năm" },
+      { name: "5TB", price: 299000, period: "năm" },
+      { name: "10TB", price: 349000, period: "năm" },
+      { name: "20TB", price: 449000, period: "năm" },
+      { name: "30TB", price: 499000, period: "năm" },
     ],
     features: [
       "Lưu trữ không giới hạn",
@@ -26,7 +26,7 @@ const pricingPlans = [
   {
     title: "Office 365",
     icon: FileType2,
-    price: 1490000,
+    price: 499000,
     period: "năm",
     features: [
       "Word, Excel, PowerPoint",
@@ -39,8 +39,8 @@ const pricingPlans = [
   {
     title: "Adobe Creative Suite",
     icon: Palette,
-    price: 2190000,
-    period: "năm",
+    price: 199000,
+    period: "phần mềm",
     features: [
       "Photoshop",
       "Illustrator",
@@ -66,7 +66,7 @@ export function Pricing() {
             Bảng Giá Đơn Giản, Minh Bạch
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Nhận 30TB lưu trữ, Gemini AI, Office 365, và Adobe Creative Suite - tất cả chỉ từ 1.190.000đ/năm. Tất cả các gói đều
+            Chọn gói dịch vụ phù hợp với nhu cầu của bạn. Tất cả các gói đều
             được bảo đảm hoàn tiền 100%.
           </p>
         </motion.div>
