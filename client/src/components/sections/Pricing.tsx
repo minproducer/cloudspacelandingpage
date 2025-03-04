@@ -20,7 +20,8 @@ const pricingPlans = [
       "Chia sẻ file nâng cao",
       "Sao lưu tự động",
       "Hỗ trợ 24/7"
-    ]
+    ],
+    popular: true
   },
   {
     title: "Office 365",
@@ -33,14 +34,14 @@ const pricingPlans = [
       "Cài đặt trực tiếp hoặc online",
       "Bảo hành trọn đời",
       "Hỗ trợ kỹ thuật 24/7"
-    ],
-    popular: true
+    ]
+    
   },
   {
     title: "Adobe Creative Suite",
     icon: Palette,
     price: 199000,
-    period: "gói",
+    period: "phần mềm",
     features: [
       "Photoshop",
       "Illustrator",
