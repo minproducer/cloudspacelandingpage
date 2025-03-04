@@ -20,8 +20,10 @@ export function Navbar() {
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, elementId: string) => {
     e.preventDefault();
-    scrollToElement(elementId);
-    setIsOpen(false);
+    setTimeout(() => {
+      scrollToElement(elementId);
+      setIsOpen(false);
+    }, 100);
   };
 
   const NavLinks = () => (
