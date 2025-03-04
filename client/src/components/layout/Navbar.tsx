@@ -7,6 +7,9 @@ import { useIsMobile } from "@/hooks/use-mobile";
 import { useSmoothScroll } from "@/hooks/use-smooth-scroll";
 import { SocialDialog } from "@/components/shared/SocialDialog";
 import { motion, AnimatePresence } from "framer-motion";
+import { Sun, Moon } from 'lucide-react'; // Added import for icons
+import { useTheme } from '@/context/ThemeContext'; // Placeholder import
+
 
 const navItems = [
   { href: "services", label: "Dịch Vụ" },
@@ -16,10 +19,15 @@ const navItems = [
 ];
 
 export function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
   const isMobile = useIsMobile();
-  const [isOpen, setIsOpen] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // Added missing state
-  const scrollToElement = useSmoothScroll();
+  const scrollTo = useSmoothScroll();
+  const { theme, toggleTheme } = useTheme(); // Use the theme context
+
+  // Scrolled background
+  const handleScroll = () => {
+    setScrolled(window.scrollY > 20);
+  };
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, elementId: string) => {
     e.preventDefault();
@@ -48,6 +56,9 @@ export function Navbar() {
       ))}
     </>
   );
+
+  const [isOpen, setIsOpen] = useState(false);
+
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -98,6 +109,25 @@ export function Navbar() {
                         {item.label}
                       </motion.a>
                     ))}
+                    <div className="mt-6 flex flex-col gap-3"> {/* Added div for theme toggle */}
+                      <Button
+                        variant="outline"
+                        onClick={toggleTheme}
+                        className="flex items-center justify-center gap-2"
+                      >
+                        {theme === 'dark' ? (
+                          <>
+                            <Sun className="h-5 w-5" />
+                            <span>Chế độ sáng</span>
+                          </>
+                        ) : (
+                          <>
+                            <Moon className="h-5 w-5" />
+                            <span>Chế độ tối</span>
+                          </>
+                        )}
+                      </Button>
+                    </div>
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -106,20 +136,35 @@ export function Navbar() {
         ) : (
           <nav className="flex items-center gap-8">
             <NavLinks />
-            <SocialDialog>
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+            <div className="flex items-center gap-2 md:gap-4">
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={toggleTheme}
+                className="mr-2"
+                aria-label="Toggle theme"
               >
-                <Button
-                  className="bg-orange-500 hover:bg-orange-600 px-6 font-medium"
-                  size="lg"
+                {theme === 'dark' ? (
+                  <Sun className="h-5 w-5" />
+                ) : (
+                  <Moon className="h-5 w-5" />
+                )}
+              </Button>
+              <SocialDialog>
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 >
-                  Đăng Ký Ngay
-                </Button>
-              </motion.div>
-            </SocialDialog>
+                  <Button
+                    className="bg-orange-500 hover:bg-orange-600 px-6 font-medium"
+                    size="lg"
+                  >
+                    Đăng Ký Ngay
+                  </Button>
+                </motion.div>
+              </SocialDialog>
+            </div>
           </nav>
         )}
       </div>
