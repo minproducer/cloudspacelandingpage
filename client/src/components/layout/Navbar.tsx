@@ -5,6 +5,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { useSmoothScroll } from "@/hooks/use-smooth-scroll";
+import { SocialDialog } from "@/components/shared/SocialDialog";
 
 const navItems = [
   { href: "services", label: "Dịch Vụ" },
@@ -62,12 +63,14 @@ export function Navbar() {
         ) : (
           <nav className="flex items-center gap-8">
             <NavLinks />
-            <Button 
-              className="bg-orange-500 hover:bg-orange-600 px-6 font-medium"
-              size="lg"
-            >
-              Đăng Ký Ngay
-            </Button>
+            <SocialDialog>
+              <Button 
+                className="bg-orange-500 hover:bg-orange-600 px-6 font-medium"
+                size="lg"
+              >
+                Đăng Ký Ngay
+              </Button>
+            </SocialDialog>
           </nav>
         )}
       </div>

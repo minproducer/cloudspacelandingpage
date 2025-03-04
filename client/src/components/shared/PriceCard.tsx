@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { LucideIcon } from "lucide-react";
 import { Check } from "lucide-react";
+import { SocialDialog } from "@/components/shared/SocialDialog";
 
 interface PriceTier {
   name: string;
@@ -88,9 +89,11 @@ export function PriceCard({
 
         <Button
           className={`w-full h-12 text-lg font-medium ${popular ? 'bg-orange-500 hover:bg-orange-600' : ''}`}
+          onClick={() => {/*Open SocialDialog*/}}
         >
           Đăng Ký Ngay
         </Button>
+        <SocialDialog />
       </CardContent>
     </Card>
   );
