@@ -96,9 +96,12 @@ export function Navbar() {
                         key={item.href}
                         href={`#${item.href}`}
                         className="text-foreground/80 hover:text-primary px-4 py-2 -mx-4 rounded-md hover:bg-primary/10 transition-colors duration-300"
-                        onClick={() => {
-                          setIsOpen(false);
-                          scrollToElement(item.href);
+                        onClick={(e) => {
+                          e.preventDefault();
+                          setTimeout(() => {
+                            scrollTo(item.href);
+                            setIsOpen(false);
+                          }, 100);
                         }}
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
