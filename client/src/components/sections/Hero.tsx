@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden py-24 md:py-32">
-      <div className="container relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+    <section className="relative overflow-hidden py-32 md:py-40">
+      <div className="container">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24 items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -16,10 +16,10 @@ export function Hero() {
               Lưu Trữ Đám Mây & Công Cụ Sáng Tạo với{" "}
               <span className="text-primary bg-primary/10 px-2 rounded-md">Giá Tốt Nhất</span>
             </h1>
-            <p className="text-xl text-muted-foreground mb-10 leading-relaxed">
+            <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
               Nhận 30TB lưu trữ, Gemini AI, Office 365, và Adobe Creative Suite - tất cả chỉ từ 1.190.000đ/tháng.
             </p>
-            <div className="flex flex-col sm:flex-row gap-5">
+            <div className="flex flex-col sm:flex-row gap-6">
               <Button 
                 size="lg" 
                 className="bg-orange-500 hover:bg-orange-600 px-8 h-14 text-lg font-medium"

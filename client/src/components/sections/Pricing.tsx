@@ -53,16 +53,16 @@ const pricingPlans = [
 
 export function Pricing() {
   return (
-    <section id="pricing" className="py-24 md:py-32">
+    <section id="pricing" className="py-32 md:py-40">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16"
+          className="text-center mb-20"
         >
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight">
+          <h2 className="text-3xl md:text-5xl font-bold mb-8 tracking-tight">
             Bảng Giá Đơn Giản, Minh Bạch
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -70,7 +70,7 @@ export function Pricing() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 xl:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 xl:gap-16">
           {pricingPlans.map((plan, index) => (
             <motion.div
               key={plan.title}
