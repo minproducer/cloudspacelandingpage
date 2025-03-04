@@ -3,6 +3,13 @@ import { motion } from "framer-motion";
 import { SocialDialog } from "@/components/shared/SocialDialog";
 
 export function Hero() {
+  const handleScrollToPricing = () => {
+    const pricingSection = document.getElementById("pricing");
+    if (pricingSection) {
+      pricingSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="relative overflow-hidden py-32 md:py-40">
       <div className="container">
@@ -30,9 +37,9 @@ export function Hero() {
                 </Button>
               </SocialDialog>
               <Button 
-                size="lg" 
-                variant="outline"
-                className="h-14 px-8 text-lg font-medium border-2"
+                size="lg"
+                className="bg-primary/10 hover:bg-primary/20 text-primary px-8 h-14 text-lg font-medium"
+                onClick={handleScrollToPricing}
               >
                 Xem Bảng Giá
               </Button>
