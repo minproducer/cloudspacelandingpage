@@ -32,7 +32,7 @@ export function Navbar() {
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, elementId: string) => {
     e.preventDefault();
     setTimeout(() => {
-      scrollToElement(elementId);
+      scrollTo(elementId);
       setIsOpen(false);
     }, 100);
   };
