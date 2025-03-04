@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { FacebookIcon, YoutubeIcon } from "lucide-react";
-import { TiSocialTiktok } from "react-icons/ti";
+import { FaTiktok } from "react-icons/fa6";
 import { ReactNode } from "react";
 
 const socialLinks = [
@@ -26,7 +26,7 @@ const socialLinks = [
   },
   {
     name: "Tiktok",
-    icon: TiSocialTiktok,
+    icon: FaTiktok,
     url: "https://tiktok.com",
     color: "bg-[#000] hover:bg-[#333]",
   },
