@@ -22,21 +22,24 @@ export function Hero() {
           >
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-8 leading-[1.1]">
               Lưu Trữ Đám Mây & Công Cụ Sáng Tạo với{" "}
-              <span className="text-primary bg-primary/10 px-2 rounded-md">Giá Tốt Nhất</span>
+              <span className="text-primary bg-primary/10 px-2 rounded-md">
+                Giá Tốt Nhất
+              </span>
             </h1>
             <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
-              Nhận 30TB lưu trữ, Gemini AI, Office 365, và Adobe Creative Suite - tất cả chỉ từ 1.190.000đ/tháng.
+              Nhận 30TB lưu trữ, Gemini AI, Office 365, và Adobe Creative Suite
+              - tất cả chỉ từ 1.190.000đ/năm.
             </p>
             <div className="flex flex-col sm:flex-row gap-6">
               <SocialDialog>
-                <Button 
-                  size="lg" 
+                <Button
+                  size="lg"
                   className="bg-orange-500 hover:bg-orange-600 px-8 h-14 text-lg font-medium"
                 >
                   Dùng Thử Miễn Phí
                 </Button>
               </SocialDialog>
-              <Button 
+              <Button
                 size="lg"
                 className="bg-primary/10 hover:bg-primary/20 text-primary px-8 h-14 text-lg font-medium"
                 onClick={handleScrollToPricing}
