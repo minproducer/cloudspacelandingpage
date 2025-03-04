@@ -6,7 +6,8 @@ const pricingPlans = [
   {
     title: "Google One",
     icon: Database,
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdY7XDGTOBffioTozmu3G49cZY8Yq1hNd6Pg&s",
+    image:
+      "https://cdn1.iconfinder.com/data/icons/logos-brands-in-colors/176/Google_One_logo-512.png",
     tiers: [
       { name: "1TB", price: 99000, period: "năm" },
       { name: "2TB", price: 199000, period: "năm" },
@@ -30,6 +31,8 @@ const pricingPlans = [
     icon: FileType2,
     price: 499000,
     period: "năm",
+    image:
+      "https://download.logo.wine/logo/Office_365/Office_365-Logo.wine.png",
     features: [
       "Word, Excel, PowerPoint",
       "1TB lưu trữ OneDrive",
