@@ -14,6 +14,7 @@ interface PriceCardProps {
   title: string;
   icon: LucideIcon;
   image?: string;
+  imageSize?: 'small' | 'medium' | 'large'; // Thêm tùy chọn kích thước
   price?: number;
   period?: string;
   tiers?: PriceTier[];
@@ -30,6 +31,7 @@ export function PriceCard({
   title, 
   icon: Icon, 
   image,
+  imageSize = 'medium',
   price, 
   period = "tháng",
   tiers,
@@ -47,7 +49,14 @@ export function PriceCard({
       <CardHeader className="text-center pb-6">
         {image ? (
           <div className="flex justify-center mb-6">
-            <img src={image} alt={title} className="h-16 w-auto object-contain" />
+            <img 
+              src={image} 
+              alt={title} 
+              className={`w-auto object-contain transition-transform hover:scale-105 ${
+                imageSize === 'small' ? 'h-14' : 
+                imageSize === 'large' ? 'h-24' : 'h-20'
+              }`} 
+            />
           </div>
         ) : (
           <div className="flex justify-center mb-6">
