@@ -7,12 +7,12 @@ const pricingPlans = [
     title: "Google Drive + Gemini",
     icon: Database,
     tiers: [
-      { name: "1TB", price: 99000 },
-      { name: "2TB", price: 199000 },
-      { name: "5TB", price: 299000 },
-      { name: "10TB", price: 349000 },
-      { name: "20TB", price: 449000 },
-      { name: "30TB", price: 499000 }
+      { name: "1TB", price: 99000, period: "tháng" },
+      { name: "2TB", price: 199000, period: "tháng" },
+      { name: "5TB", price: 299000, period: "tháng" },
+      { name: "10TB", price: 349000, period: "tháng" },
+      { name: "20TB", price: 449000, period: "tháng" },
+      { name: "30TB", price: 499000, period: "tháng" }
     ],
     features: [
       "Lưu trữ không giới hạn",

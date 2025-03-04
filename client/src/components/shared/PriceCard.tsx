@@ -6,6 +6,7 @@ import { Check } from "lucide-react";
 interface PriceTier {
   name: string;
   price: number;
+  period?: string;
 }
 
 interface PriceCardProps {
@@ -60,7 +61,7 @@ export function PriceCard({
                 <span className="font-medium text-lg">{tier.name}</span>
                 <span className="text-primary font-bold text-lg">
                   {formatPrice(tier.price)}đ
-                  <span className="text-sm text-muted-foreground">/{period}</span>
+                  <span className="text-sm text-muted-foreground">/{tier.period || period}</span>
                 </span>
               </div>
             ))}
