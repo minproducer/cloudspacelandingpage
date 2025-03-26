@@ -3,8 +3,10 @@ import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
 import { Services } from "@/components/sections/Services";
 import { Pricing } from "@/components/sections/Pricing";
+import { PricingTable } from "@/components/sections/PricingTable";
 import { Guarantees } from "@/components/sections/Guarantees";
 import { Contact } from "@/components/sections/Contact";
+import { PopularSoftwarePricing } from "@/components/sections/PopularSoftwarePrice";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import { ArrowUp } from "lucide-react";
@@ -32,6 +34,8 @@ export default function Home() {
         <Hero />
         <Services />
         <Pricing />
+        <PricingTable />
+        <PopularSoftwarePricing/>
         <Guarantees />
         <Contact />
       </main>

@@ -1,32 +1,26 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
-import {
-  FacebookIcon,
-  Mail,
-  MessageSquare,
-  Phone,
-  YoutubeIcon,
-} from "lucide-react";
-import { FaTiktok } from "react-icons/fa6";
+import { Mail, Phone, MessageSquare } from "lucide-react";
+import { SiFacebook, SiYoutube, SiTiktok} from "react-icons/si" ;
 
 const socialLinks = [
   {
     name: "Facebook",
-    icon: FacebookIcon,
+    icon: SiFacebook,
     url: "https://facebook.com/chipandchillstore",
     color: "bg-[#1877F2] hover:bg-[#0e65d0]",
   },
   {
     name: "YouTube",
-    icon: YoutubeIcon,
-    url: "https://youtube.com",
+    icon: SiYoutube,
+    url: "https://youtube.com/@minproducer_yt",
     color: "bg-[#FF0000] hover:bg-[#d90000]",
   },
   {
     name: "Tiktok",
-    icon: FaTiktok,
-    url: "https://tiktok.com",
+    icon: SiTiktok,
+    url: "https://tiktok.com/@minproducer_tiktok",
     color: "bg-[#000] hover:bg-[#333]",
   },
 ];

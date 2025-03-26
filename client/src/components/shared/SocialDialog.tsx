@@ -15,19 +15,19 @@ const socialLinks = [
   {
     name: "Facebook",
     icon: FacebookIcon,
-    url: "https://facebook.com",
+    url: "https://facebook.com/chipandchillstore",
     color: "bg-[#1877F2] hover:bg-[#0e65d0]",
   },
   {
     name: "YouTube",
     icon: YoutubeIcon,
-    url: "https://youtube.com",
+    url: "https://youtube.com/@minproducer_yt",
     color: "bg-[#FF0000] hover:bg-[#d90000]",
   },
   {
     name: "Tiktok",
     icon: FaTiktok,
-    url: "https://tiktok.com",
+    url: "https://tiktok.com/@minproducer_tiktok",
     color: "bg-[#000] hover:bg-[#333]",
   },
 ];
@@ -46,7 +46,7 @@ export function SocialDialog({
       <DialogTrigger asChild>{children}</DialogTrigger>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
-          <DialogTitle>Theo dõi Chip&Chill Store</DialogTitle>
+          <DialogTitle>Theo dõi Chip & Chill Store</DialogTitle>
           <DialogDescription>
             Kết nối với chúng tôi trên các mạng xã hội để nhận thông tin mới
             nhất và ưu đãi độc quyền!

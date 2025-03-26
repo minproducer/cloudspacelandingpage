@@ -73,7 +73,7 @@ export function Pricing() {
           className="text-center mb-20"
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-8 tracking-tight">
-            Bảng Giá Đơn Giản, Minh Bạch
+            Bảng Giá Các Dịch Vụ Phổ Biến
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Chọn gói dịch vụ phù hợp với nhu cầu của bạn. Tất cả các gói đều
