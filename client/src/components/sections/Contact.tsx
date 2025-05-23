@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { Mail, Phone, MessageSquare } from "lucide-react";
-import { SiFacebook, SiYoutube, SiTiktok} from "react-icons/si" ;
+import { SiFacebook, SiYoutube, SiTiktok } from "react-icons/si";
 
 const socialLinks = [
   {
@@ -88,7 +88,7 @@ export function Contact() {
                 <Phone className="h-6 w-6 text-primary" />
                 <div>
                   <h3 className="font-semibold">Điện Thoại</h3>
-                  <p className="text-muted-foreground">077 344-8750</p>
+                  <p className="text-muted-foreground">077-344-8750</p>
                 </div>
               </CardContent>
             </Card>
